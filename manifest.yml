@@ -1,0 +1,19 @@
+applications:
+- name: springmicroservice
+  path: target/springmicroservice-0.0.1-SNAPSHOT.jar
+  memory: 1536M
+  instance: 1
+  random-route: true
+  buildpacks:
+    - sap_java_buildpack_jakarta_2_47
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    
+    
+    JBP_CONFIG_SAPJVM_MEMORY: >
+      {
+        "heap_ratio": 60,
+        "stack_threads": 50
+      }
+  services:
+    - my-postgres
