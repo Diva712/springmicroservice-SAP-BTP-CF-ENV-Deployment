@@ -1,0 +1,36 @@
+{
+  "xsappname": "springmicroservice",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "display"
+    },
+    {
+      "name": "$XSAPPNAME.Edit",
+      "description": "edit"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Allow to view the odata service",
+      "scope-references": [
+        "$XSAPPNAME.Display"
+      ]
+    },
+    {
+      "name": "Editor",
+      "description": "Access of Fiori App to edit data",
+      "scope-references": [
+        "$XSAPPNAME.Edit"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "token-validity": 900,
+    "refresh-token-validity": 1800,
+    "redirect-uris": [
+      "https://api.cf.us10-001.hana.ondemand.com"
+    ]
+  }
+}
