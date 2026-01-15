@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
           xmlns="sap.m" controllerName="donald.controller.Main">
+=======
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    controllerName="donald.controller.Main">
+
+>>>>>>> 513965f700beaa327e089a7d5ea08c17dac9915b
 
           <f:SimpleForm editable="true">
             <f:content>
@@ -22,11 +31,19 @@
                 <Input value="{local>/data/Status}"  width="5%"></Input>
 
                  <Label text="Reg Date"></Label>
+<<<<<<< HEAD
                  <DatePicker value="{local>/data/RegDate}"  width="30%"></DatePicker>
             </f:content>
           </f:SimpleForm>
 
           <Button text="Create Data" press="onLoadData" icon="sap-icon://supplier"></Button>
+=======
+                 <DatePicker valueFormat="yyyy-MM-ddT00:00:00" value="{local>/data/RegDate}"  width="30%"></DatePicker>
+            </f:content>
+          </f:SimpleForm>
+
+          <Button text="Create Data" press="onCreateData" icon="sap-icon://supplier"></Button>
+>>>>>>> 513965f700beaa327e089a7d5ea08c17dac9915b
 
           <List items="{/VendorSet}">
             <items>
