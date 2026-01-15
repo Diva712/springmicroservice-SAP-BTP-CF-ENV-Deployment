@@ -1,0 +1,38 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
+          xmlns="sap.m" controllerName="donald.controller.Main">
+
+          <f:SimpleForm editable="true">
+            <f:content>
+                <Label text="Company Name"></Label>
+                <Input value="{local>/data/CompanyName}" width="30%"></Input>
+                 <Label text="Contact Person"></Label>
+                <Input value="{local>/data/ContactPerson}"  width="30%"></Input>
+                 <Label text="Name"></Label>
+                <HBox width="50%">
+                <Input value="{local>/data/FirstName}"></Input>
+                <Input value="{local>/data/LastName}"></Input>
+                </HBox>
+                 <Label text="Website"></Label>
+                <Input value="{local>/data/Website}"  width="30%"></Input>
+
+                 <Label text="Email"></Label>
+                <Input value="{local>/data/Email}"  width="30%"></Input>
+
+                 <Label text="Status"></Label>
+                <Input value="{local>/data/Status}"  width="5%"></Input>
+
+                 <Label text="Reg Date"></Label>
+                 <DatePicker value="{local>/data/RegDate}"  width="30%"></DatePicker>
+            </f:content>
+          </f:SimpleForm>
+
+          <Button text="Create Data" press="onLoadData" icon="sap-icon://supplier"></Button>
+
+          <List items="{/VendorSet}">
+            <items>
+                <ObjectListItem icon="sap-icon://supplier" title="{CompanyName}" intro="{FirstName} {LastName}" 
+                        number="{Email}" numberUnit="{Website} = {Status}">
+                </ObjectListItem>
+            </items>
+          </List>
+</mvc:View>
